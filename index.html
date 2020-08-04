@@ -20,18 +20,19 @@
     <div class="grid-container">
         <header class="header">
           <div class="brand">
-            <button >&#9776</button>
+            <button onClick="openMenu()">&#9776</button>
             <a href="index.html">The Hungry Chipmunks</a>
           </div>
           <div class="header-links">
             <a href="index.html">Home</a>
+            <a href="index.html">Log In</a>
             <a href="index.html">Sign In</a>
           </div>
         </header>
         <aside class="sidebar">
-          <h3>Pages</h3>
-          <button class="sidebar-close-button" >
-            X
+          <h3>Menu</h3>
+          <button class="sidebar-close-button"  onClick="closeMenu()">
+            &#10005
           </button>
           <ul>
             <li>
@@ -43,11 +44,52 @@
           </ul>
         </aside>
         <main class="main">
+          <div class="search">
+            <input  type="text" placeholder="Search">
+            <button>&#x2315;</button>
+          </div>
           <div class="content">
-            
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
+            <div class="content-item">
+              Dummy Text
+            </div>
           </div>
         </main>
-        <footer class="footer">&copy;vedpatil611 dpirad007</footer>
+
+
+        <div id="main-content" class="container"></div>
+
+
+        <footer class="footer">&copy;ChipmunksCo</footer>
       </div>
+      <script>
+        function openMenu(){
+          document.querySelector(".sidebar").classList.add("open")
+        }
+  
+        function closeMenu(){
+          document.querySelector(".sidebar").classList.remove("open")
+        }
+      </script>
   </body>
 </html>

@@ -24,29 +24,30 @@ body {
 
 .header {
   grid-area: header;
-  background-color: white;
+  background-color: #0fabbc;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .brand a {
-  color: #d0bdf4;
+  color: white;
   font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
 }
 
 .header-links a {
-  color: #d0bdf4;
+  color: white;
   text-decoration: none;
   padding: 1rem;
 }
 
 .header-links a:hover {
-  color: #9932cc;
+  color: #d0bdf4;
 }
 
 .main {
@@ -66,12 +67,106 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #9932cc;
+  color: #d0bdf4;
 }
 
+/*Sidebar*/
+
+.brand button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.brand button:hover {
+  color: #d0bdf4;
+}
+
+.sidebar {
+  position: fixed;
+  transition: all 0.5s;
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-close-button {
+  color: #9932cc;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+  font-size: 2rem;
+}
+
+.sidebar h3 {
+  color: #9932cc;
+  margin-left: 0.5rem;
+}
+
+/* main */
+/* search bar */
+.search {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  margin-bottom: 30px;
+}
+
+.search input {
+  outline: none;
+  width: 20%;
+  color: #9932cc;
+  background-color: white;
+  border-radius: 25px;
+  border-color: #d0bdf4;
+}
+
+.search button {
+  outline: none;
+  background-color: white;
+  color: #9932cc;
+  border-radius: 25px;
+  border-color: #d0bdf4;
+  margin-left: 10px;
+  width: 3%;
+  font-size: 2rem;
+}
+
+.search input:focus {
+  border-color: #9932cc;
+}
+
+/* main */
+/* content */
 .content {
-  background-image: url("../public/phone.jpg ");
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: auto;
+}
+
+.content-item {
+  text-align: center;
+  border-style: solid;
+  border-radius: 25px;
+  height: 300px;
+  width: 300px;
+  border-color: #d0bdf4;
+  color: #9932cc;
+  background-color: white;
+  box-shadow: 1px 1px #c574ee;
+  margin-bottom: 30px;
 }
