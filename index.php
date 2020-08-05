@@ -25,12 +25,12 @@
         <header class="header">
           <div class="brand">
             <button onClick="openMenu()">&#9776</button>
-            <a href="index.html">The Hungry Chipmunks</a>
+            <a href="index.php">The Hungry Chipmunks</a>
           </div>
           <div class="header-links">
-            <a href="index.html">Home</a>
-            <a href="login.html">Log In</a>
-            <a href="signup.html">Sign Up</a>
+            <a href="index.php">Home</a>
+            <a href="login.php">Log In</a>
+            <a href="signup.php">Sign Up</a>
           </div>
         </header>
         <aside class="sidebar">
@@ -40,10 +40,10 @@
           </button>
           <ul>
             <li>
-              <a href="index.html">Recepies</a>
+              <a href="index.php">Recepies</a>
             </li>
             <li>
-              <a href="index.html">Blog</a>
+              <a href="index.php">Blog</a>
             </li>
           </ul>
         </aside>
@@ -58,7 +58,7 @@
                 Dummy Text
               </div>
               <div>
-                <img src="public/phone-660.jpg">
+                <img src="res/images/phone-660.jpg">
               </div>
               <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis recusandae expedita dolores dignissimos natus autem deleniti deserunt voluptatibus magnam nam. Tempore officiis officia quia illo vitae aliquam nesciunt quod iure.</div>
               <div>
