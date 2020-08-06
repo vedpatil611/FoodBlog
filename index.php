@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hungry Chipmunks</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="public/stylesheets/styles.css?version=51" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
       rel="stylesheet"
@@ -55,42 +55,105 @@
           <div class="content">
             <div class="content-item">
               <div>
-                Dummy Text
+                Cake
               </div>
               <div>
                 <img src="res/images/phone-660.jpg">
               </div>
-              <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis recusandae expedita dolores dignissimos natus autem deleniti deserunt voluptatibus magnam nam. Tempore officiis officia quia illo vitae aliquam nesciunt quod iure.</div>
+              <div>UserName</div>
+              <div>
+                <form action="view.php">
+                  <button type="submit">View</button>
+                </form>
+              </div>
+            </div>
+            <div class="content-item">
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
+            </div><div class="content-item">
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
               <div>
                 <button>View</button>
               </div>
             </div>
             <div class="content-item">
-              Dummy Text
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
             </div>
             <div class="content-item">
-              Dummy Text
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
             </div>
             <div class="content-item">
-              Dummy Text
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
             </div>
             <div class="content-item">
-              Dummy Text
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
             </div>
             <div class="content-item">
-              Dummy Text
-            </div>
-            <div class="content-item">
-              Dummy Text
-            </div>
-            <div class="content-item">
-              Dummy Text
+              <div>
+                Cake
+              </div>
+              <div>
+                <img src="res/images/phone-660.jpg">
+              </div>
+              <div>UserName</div>
+              <div>
+                <button>View</button>
+              </div>
             </div>
           </div>
         </main>
 
 
-        <div id="main-content" class="container"></div>
 
 
         <footer class="footer">&copy;ChipmunksCo</footer>

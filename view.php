@@ -48,20 +48,20 @@
           </ul>
         </aside>
         <main class="main">
-             <div class="input-log">
-                <input  id="username" type="text" placeholder="Enter Email">
-            </div> 
-            <div class="input-log">
-                <input  id="username" type="text" placeholder="Enter Username">
-            </div> 
-            <div class="input-log">
-                <input  id="password" type="password" placeholder="Enter Password">
-             </div>
-             <div class="submit-log">
-                 <button type="submit">Sign Up</button>
-             </div>
-        </main>
+          <div class="search">
+            <input  type="text" placeholder="Search">
+            <button>&#x2315;</button>
+          </div>
+          <div class="content-view">
+            <div class="content-view-item">
 
+            </div>
+            <div class="content-view-item">
+                
+            </div>
+            
+          </div>
+        </main>
 
 
 
