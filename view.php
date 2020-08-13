@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hungry Chipmunks</title>
-    <link rel="stylesheet" href="public/stylesheets/styles.css?version=51" />
+    <link rel="stylesheet" href="public/stylesheets/styles.css?version=52" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
       rel="stylesheet"
@@ -54,10 +54,13 @@
           </div>
           <div class="content-view">
             <div class="content-view-item">
-
+            <img src="res/images/phone-660.jpg">
             </div>
             <div class="content-view-item">
-                
+            <h2>Step 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis delectus similique porro, eligendi quo accusantium nostrum consequuntur ducimus exercitationem? Impedit fugit, exercitationem enim alias maxime voluptatibus sunt corporis voluptate assumenda?</p>
+            <button class="next-btn"><</button>
+            <button class="next-btn">></button>
             </div>
             
           </div>

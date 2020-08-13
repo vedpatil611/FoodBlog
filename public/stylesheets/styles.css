@@ -260,17 +260,34 @@ a:hover {
 }
 
 .content-view-item {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
   border-style: solid;
   border-radius: 25px;
+  text-align: center;
   height: 600px;
-  width: 95%;
+  width: 650px;
   border-color: #00bcd4;
   color: #00bcd4;
   background-color: black;
   box-shadow: 1px 1px #fcfcfc;
   margin-bottom: 30px;
+}
+
+.content-view-item img {
+  margin-top: 4px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.next-btn {
+  outline: none;
+  border: none;
+  font-size: 3rem;
+  margin-top: 400px;
+  color: #00bcd4;
+  background-color: black;
+}
+
+.next-btn:hover {
+  transform: scale(0.95, 0.95);
+  color: white;
 }
