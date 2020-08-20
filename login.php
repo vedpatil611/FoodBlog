@@ -48,15 +48,17 @@
           </ul>
         </aside>
         <main class="main">
+          <form action="user_signup.php" method="post">
              <div class="input-log">
-                <input  id="username" type="text" placeholder="Enter Username">
+                <input  name="username" type="text" placeholder="Enter Username">
             </div> 
             <div class="input-log">
-                <input  id="password" type="password" placeholder="Enter Password">
+                <input  name="password" type="password" placeholder="Enter Password">
              </div>
              <div class="submit-log">
                  <button>Log In</button>
              </div>
+          </form>
         </main>
 
 

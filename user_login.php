@@ -1,11 +1,11 @@
 <?php
   require "conn.php";
 
-  $email = $_POST['email'];
   $username = $_POST['username'];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $sql = "INSERT INTO users(username, email, password) VALUES('".$username."', '".$email."', '".$password."')";
+  $sql = "SELECT username, password FROM users WHERE username='".$username."', password='".$password."')";
+  $result = mysqli_query($conn, $sql);
   
   if(mysqli_query($conn, $sql)) {
   	header("Location: login.php");
