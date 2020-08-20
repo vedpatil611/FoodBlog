@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hungry Chipmunks</title>
-    <link rel="stylesheet" href="public/stylesheets/styles.css?version=52" />
+    <link rel="stylesheet" href="public/stylesheets/styles.css?version=53" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
       rel="stylesheet"
@@ -55,6 +55,12 @@
           <div class="content-view">
             <div class="content-view-item">
             <img src="res/images/phone-660.jpg">
+            <div>UserName</div> 
+            <div class="social-btn">
+              <button>Blog</button>
+              <button>Social</button>
+              <button>Social</button>
+            </div>
             </div>
             <div class="content-view-item">
             <h2>Step 1</h2>
