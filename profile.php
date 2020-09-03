@@ -56,15 +56,18 @@
 
             <div class="content-profile-item">
        
-            <div>UserName</div> 
-            <div class="profile-btn">
-             
-            </div>
+            
             </div>
 
             <div class="content-profile-item">
             <img src="res/images/phone-660.jpg">
-          
+            <div class="profile-user">Username</div>
+            <div class="profile-user">Bio</div>
+            <div class="profile-user">Location</div>
+            <div class="profile-user"><a>Website</a></div>
+            <div class="profile-btn"><button>&#9974;</button></div>
+
+            
             </div>
             
           </div>

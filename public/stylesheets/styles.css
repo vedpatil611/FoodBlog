@@ -39,16 +39,19 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 .header-links a {
   color: white;
   text-decoration: none;
   padding: 1rem;
+  transition: font-size 0.5s, color 0.5s;
 }
 
 .header-links a:hover {
   color: #f9d56e;
+  font-size: 2rem;
 }
 
 .main {
@@ -81,6 +84,7 @@ a:hover {
   border: none;
   color: white;
   cursor: pointer;
+  transition: color 0.5s;
 }
 
 .brand button:hover {
@@ -158,10 +162,12 @@ a:hover {
   margin-left: 10px;
   width: 3%;
   font-size: 2rem;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .search button:hover {
-  transform: scale(0.95, 0.95);
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
 }
 
 /* login */
@@ -195,10 +201,12 @@ a:hover {
   width: 10%;
   height: 30px;
   font-size: 1.5rem;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .submit-log button:hover {
-  transform: scale(0.95, 0.95);
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
 }
 
 /* main */
@@ -239,10 +247,12 @@ a:hover {
   margin-right: 210px;
   margin-top: 20px;
   background-color: #f9d56e;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .content-item button:hover {
-  transform: scale(0.95, 0.95);
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
 }
 
 .content-item img {
@@ -303,10 +313,12 @@ a:hover {
   width: 10%;
   height: 30px;
   font-size: 1.5rem;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .social-btn button:hover {
-  transform: scale(0.95, 0.95);
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
 }
 
 /* main */
@@ -349,8 +361,15 @@ a:hover {
   width: 10%;
   height: 30px;
   font-size: 1.5rem;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .profile-btn button:hover {
-  transform: scale(0.95, 0.95);
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
+}
+
+.profile-user {
+  font-size: 2rem;
+  margin: 50px;
 }
