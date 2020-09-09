@@ -12,7 +12,7 @@
 
 /*---------------------------Name Field Validation-----------------------------*/
     //Check if empty field
-    if (empty($_POST["name"])) {
+    if (empty($_POST["username"])) {
       $usernameErr = "Name is required";}
     //Check if only alphabets and numbers present in username
     elseif (!preg_match ("/^[a-zA-Z0-9]*$/", validate_sql_injection($_POST["username"]))) {
