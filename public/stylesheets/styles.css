@@ -156,7 +156,7 @@ a:hover {
 .search button {
   outline: none;
   border: none;
-
+  cursor: pointer;
   background-color: #f9d56e;
   border-radius: 25px;
   margin-left: 10px;
@@ -195,6 +195,7 @@ a:hover {
 .submit-log button {
   outline: none;
   border: none;
+  cursor: pointer;
   background-color: #00bcd4;
   border-radius: 25px;
   margin-left: 10px;
@@ -241,6 +242,7 @@ a:hover {
 .content-item button {
   outline: none;
   border: none;
+  cursor: pointer;
   width: 25%;
   height: 25px;
   border-radius: 25px;
@@ -292,6 +294,7 @@ a:hover {
 .next-btn {
   outline: none;
   border: none;
+  cursor: pointer;
   font-size: 3rem;
   margin-top: 400px;
   color: #00bcd4;
@@ -305,6 +308,7 @@ a:hover {
 
 .social-btn button {
   margin-top: 50px;
+  cursor: pointer;
   outline: none;
   border: none;
   background-color: #f9d56e;

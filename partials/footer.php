@@ -1,0 +1,1 @@
+<footer class="footer">&copy;ChipmunksCo</footer>
