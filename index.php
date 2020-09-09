@@ -4,22 +4,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Hungry Chipmunks</title>
-    <link rel="stylesheet" href="public/stylesheets/styles.css?version=53" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+
+  <?php
+    include('./partials/header.php');
+  ?>
+  
   <body>
     <div class="grid-container">
         <header class="header">
@@ -52,112 +41,50 @@
             <input  type="text" placeholder="Search">
             <button>&#x2315;</button>
           </div>
+
+         
            
           <div class="content">
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <form action="view.php">
-                  <button type="submit">View</button>
-                </form>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div><div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="content-item">
-              <div>
-                Cake
-              </div>
-              <div>
-                <img src="res/images/phone-660.jpg">
-              </div>
-              <div>UserName</div>
-              <div>
-                <button>View</button>
-              </div>
-            </div>
+
+          <?php
+          
+          $qry = "select * from recipe";
+          if($res=mysqli_query($conn,$qry))
+          {
+            if(mysqli_num_rows($res)>0)
+            {
+    
+              while($row = mysqli_fetch_array($res))
+              {
+                echo '<div class="content-item">';
+                echo  '<div>'.$row['Name'].'</div>';
+                  echo '<div>';
+                 echo '<img src="data:image;base64,'.$row['Photo'].'"> ';
+                 echo '</div>';
+                echo '<div>'.$row['Publisher'].'</div>';
+                  echo '<div>';
+                    echo '<form action="view.php">';
+                     echo '<button type="submit">View</button>';
+                    echo '</form>';
+                  echo '</div>';
+                echo '</div>';
+              }
+            }
+          }
+          
+          ?>
+
+           
           </div>
         </main>
 
+        <?php
+          include('./partials/footer.php');
+        ?>
+  
 
 
-
-        <footer class="footer">&copy;ChipmunksCo</footer>
+       
       </div>
       <script>
         function openMenu(){

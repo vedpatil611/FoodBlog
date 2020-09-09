@@ -4,22 +4,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Hungry Chipmunks</title>
-    <link rel="stylesheet" href="public/stylesheets/styles.css?version=53" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lora"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+<?php
+    include('./partials/header.php');
+  ?>
   <body>
     <div class="grid-container">
         <header class="header">
@@ -55,7 +42,59 @@
           <div class="content-profile">
 
             <div class="content-profile-item">
-       
+            <form method="post" enctype="multipart/form-data">
+            <br/>
+            <div class="buttons">
+            <input type="file" name="photo"/>
+            <input type="text" name="name"/>
+            <input type="text" name="publisher"/>
+            <input type="text" name="description"/>
+
+            <br/><br/>
+            <input type="submit" name="submit" value="Upload"/>
+            </div>
+          </form>
+          <?php
+            
+            if(isset($_POST['submit']))
+            {
+                if(getimagesize($_FILES['photo']['tmp_name'])==FALSE)
+                {
+                    echo "Please select an image";
+                }
+                else
+                {
+                    $image= addslashes($_FILES['photo']['tmp_name']);
+                    $image= file_get_contents($image);
+                    $image= base64_encode($image);
+                    $name=$_POST['name'];
+                    $publisher=$_POST['publisher'];
+                    $description=$_POST['description'];
+                    saveimage($name,$image,$publisher,$description,$conn);
+                
+                }
+            }
+           
+
+            function saveimage($name,$image,$publisher,$description,$con)
+            {
+               
+              
+
+                $qry="insert into recipe (Name,Publisher,Description,Photo) values ('$name','$publisher','$description','$image')";
+                $result=mysqli_query($con, $qry);
+                if($result)
+                {
+                    echo "<br/> Image Uploaded";
+                }
+                else
+                {
+                    echo "<br/> Image not Uploaded";
+                }
+            }
+
+           
+        ?>
             
             </div>
 
@@ -66,8 +105,6 @@
             <div class="profile-user">Location</div>
             <div class="profile-user"><a>Website</a></div>
             <div class="profile-btn"><button>&#9974;</button></div>
-
-            
             </div>
             
           </div>

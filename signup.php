@@ -4,6 +4,9 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+    include('./partials/header.php');
+  ?>
   <head>
       <style>
          .error {color: #FF0000;}
@@ -52,12 +55,8 @@
           </ul>
         </aside>
         <main class="main">
-<<<<<<< HEAD
           <form name="signup_form" action="user_signup.php" method="post">
-=======
       <p><span class = "error">* required field.</span></p>
-          <form action="user_signup.php" method="post">
->>>>>>> 7817f9063493790c43076faa626605ffe3e5ec0a
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
             <span class = "error">* <?php echo $emailErr;?></span>
