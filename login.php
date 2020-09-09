@@ -35,7 +35,7 @@
           </ul>
         </aside>
         <main class="main">
-          <form action="user_signup.php" method="post">
+          <form name="login_form" action="user_login.php" method="post">
              <div class="input-log">
                 <input  name="username" type="text" placeholder="Enter Username">
             </div> 

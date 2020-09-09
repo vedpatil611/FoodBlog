@@ -54,9 +54,14 @@
     }else {
      $password = password_hash(validate_sql_injection($_POST["password"]), PASSWORD_DEFAULT);
     }
+
+  	$sql = "INSERT INTO users(username, email, password) VALUES('".$username."', '".$email."', '".$password."')";
+
+ 	if(mysqli_query($conn, $sql)) {
+ 	   header("Location: login.php");
+  	}
 }
 
-  $sql = "INSERT INTO users(username, email, password) VALUES('".$username."', '".$email."', '".$password."')";
   
 //function to avert simple sql injection
   function validate_sql_injection($data) {
@@ -66,9 +71,6 @@
             return $data;
          }
 
-  // if(mysqli_query($conn, $sql)) {
-  // 	header("Location: login.php");
-  // } 
  
 ?>
 
