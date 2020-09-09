@@ -1,10 +1,14 @@
 <?php
-  require "conn.php"
+  include 'user_signup.php';
+  require "conn.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <style>
+         .error {color: #FF0000;}
+      </style>
+   </head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Hungry Chipmunks</title>
@@ -48,15 +52,23 @@
           </ul>
         </aside>
         <main class="main">
+<<<<<<< HEAD
           <form name="signup_form" action="user_signup.php" method="post">
+=======
+      <p><span class = "error">* required field.</span></p>
+          <form action="user_signup.php" method="post">
+>>>>>>> 7817f9063493790c43076faa626605ffe3e5ec0a
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
+            <span class = "error">* <?php echo $emailErr;?></span>
             </div> 
             <div class="input-log">
                 <input  name="username" type="text" placeholder="Enter Username">
+            <span class = "error">* <?php echo $usernameErr;?></span>
             </div> 
             <div class="input-log">
                 <input  name="password" type="password" placeholder="Enter Password">
+            <span class = "error">* <?php echo $passwordErr;?></span>
             </div>
             <div class="submit-log">
                  <button type="submit">Sign Up</button>
