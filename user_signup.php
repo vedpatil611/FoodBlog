@@ -66,9 +66,9 @@
             return $data;
          }
 
-  if(mysqli_query($conn, $sql)) {
-  	header("Location: login.php");
-  } 
+  // if(mysqli_query($conn, $sql)) {
+  // 	header("Location: login.php");
+  // } 
  
 ?>
 

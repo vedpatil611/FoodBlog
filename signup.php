@@ -4,11 +4,9 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-<?php
+  <?php
     include('./partials/header.php');
   ?>
-=======
   <head>
       <style>
          .error {color: #FF0000;}
@@ -29,7 +27,6 @@
       type="text/css"
     />
   </head>
->>>>>>> 7817f9063493790c43076faa626605ffe3e5ec0a
   <body>
     <div class="grid-container">
         <header class="header">
@@ -58,7 +55,7 @@
           </ul>
         </aside>
         <main class="main">
-      <p><span class = "error">* required field.</span></p>
+          <p><span class = "error">* required field.</span></p>
           <form action="user_signup.php" method="post">
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
