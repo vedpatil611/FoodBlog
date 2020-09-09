@@ -355,6 +355,37 @@ a:hover {
   border-radius: 50%;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-profile-item input {
+  outline: none;
+  width: 40%;
+  height: 30px;
+  background-color: white;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.content-profile-item button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #f9d56e;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.content-profile-item button:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
+}
+
 .profile-btn button {
   margin-top: 50px;
   outline: none;
