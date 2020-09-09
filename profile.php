@@ -44,19 +44,20 @@
             <div class="content-profile-item">
             <form method="post" enctype="multipart/form-data">
             <br/>
-            <div class="buttons">
+            <div class="inputs">
             <input type="file" name="photo"/>
-            <input type="text" name="name"/>
-            <input type="text" name="publisher"/>
-            <input type="text" name="description"/>
+            <input type="text" name="name" placeholder="Dish"/>
+            <input type="text" name="publisher" placeholder="Username"/>
+            <input type="text" name="description" placeholder="Description"/>
 
             <br/><br/>
-            <input type="submit" name="submit" value="Upload"/>
+            <button
+             type="submit" name="submit" value="Upload">POST</button>
             </div>
           </form>
           <?php
             
-            if(isset($_POST['submit']))
+            if(isset($_POST['submit']) && isset($_FILES['photo']))
             {
                 if(getimagesize($_FILES['photo']['tmp_name'])==FALSE)
                 {
@@ -85,11 +86,11 @@
                 $result=mysqli_query($con, $qry);
                 if($result)
                 {
-                    echo "<br/> Image Uploaded";
+                    echo "<br/> Uploaded";
                 }
                 else
                 {
-                    echo "<br/> Image not Uploaded";
+                    echo "<br/> Not Uploaded";
                 }
             }
 
