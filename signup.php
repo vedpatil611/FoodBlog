@@ -48,7 +48,7 @@
           </ul>
         </aside>
         <main class="main">
-          <form action="user_signup.php" method="post">
+          <form name="signup_form" action="user_signup.php" method="post">
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
             </div> 
