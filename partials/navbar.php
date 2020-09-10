@@ -7,6 +7,6 @@
 	} else {
 		echo '<a href="index.php">Home</a>';
         echo '<a href="profile.php">Profile</a>';
-		echo '<a href="#">Logout</a>';
+		echo '<a href="logout.php">Logout</a>';
 	}
 ?>

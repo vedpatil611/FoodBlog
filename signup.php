@@ -54,6 +54,11 @@
             </li>
           </ul>
         </aside>
+        <?php 
+          $emailErr = $_GET["emailErr"];
+          $passwordErr = $_GET["passwordErr"];
+          $usernameErr = $_GET["usernameErr"];
+        ?>
         <main class="main">
           <form name="signup_form" action="user_signup.php" method="post">
       <p><span class = "error">* required field.</span></p>

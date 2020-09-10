@@ -17,18 +17,6 @@
 			<a href="index.php">The Hungry Chipmunks</a>
 		  </div>
 		  <div class="header-links">
-			<!-- <?php
-				session_start();
-				if(is_null($_SESSION["user_id"])) {
-					echo '<a href="index.php">Home</a>';
-					echo '<a href="login.php">Log In</a>';
-					echo '<a href="signup.php">Sign Up</a>';
-			  	} else {
-			  		echo '<a href="index.php">Home</a>';
-            		echo '<a href="profile.php">Profile</a>';
-            		echo '<a href="#">Logout</a>';
-			  	}
-			?> -->
 			<?php include "./partials/navbar.php" ?>
 		  </div>
 		</header>

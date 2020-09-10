@@ -16,9 +16,6 @@
             <a href="index.php">The Hungry Chipmunks</a>
           </div>
           <div class="header-links">
-            <!-- <a href="index.php">Home</a>
-            <a href="#">Profile</a>
-            <a href="#">Logout</a> -->
             <?php include "./partials/navbar.php" ?>
           </div>
         </header>

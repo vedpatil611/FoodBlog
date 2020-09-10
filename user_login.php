@@ -4,7 +4,6 @@
   $username = strval($_POST['username']);
   $password = $_POST['password'];
 
-  // $sql = "SELECT id, username, password FROM `users` WHERE username=`".$username."`)";
 	$sql = "SELECT id, username, password FROM `users` WHERE username=?";
 
   $stmt = mysqli_stmt_init($conn);

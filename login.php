@@ -15,9 +15,6 @@
             <a href="index.php">The Hungry Chipmunks</a>
           </div>
           <div class="header-links">
-            <!-- <a href="index.php">Home</a>
-            <a href="login.php">Log In</a>
-            <a href="signup.php">Sign Up</a> -->
             <?php include "./partials/navbar.php" ?>
           </div>
         </header>
