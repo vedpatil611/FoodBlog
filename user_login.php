@@ -21,14 +21,13 @@
   	if(password_verify($password, $row["password"]) == true) {
   		session_start();
   		$_SESSION["user_id"] = $row["id"];
-    	header("Location: profile.php");
+    	header("Location: login.php");
     } else {
 			// Print credential errors here
-			echo "failure";
+			echo "Wrong password";
 		}
   } else {
-  	echo mysqli_num_rows($result);
-  	echo "Noob";
+  	echo "User does not exist";
   }
 
     

@@ -7,6 +7,9 @@
 <?php
     include('./partials/header.php');
     session_start();
+    if (!isset($_SESSION["user_id"])) {
+    	header("Location: login.php");
+    }
   ?>
   <body>
     <div class="grid-container">
