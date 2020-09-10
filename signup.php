@@ -56,6 +56,10 @@
         </aside>
         <main class="main">
           <h1>Sign Up</h1>
+          
+          
+          <!-- User Signup form starting-->
+          <!--When user submits this form user_signup.php will be executed that validates the data.-->
           <form name="signup_form" action="user_signup.php" method="post">
 
             <div class="input-log">
