@@ -16,8 +16,8 @@
           </div>
           <div class="header-links">
             <a href="index.php">Home</a>
-            <a href="login.php">Log In</a>
-            <a href="signup.php">Sign Up</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
           </div>
         </header>
         <aside class="sidebar">
@@ -105,7 +105,8 @@
             <div class="profile-user">Bio</div>
             <div class="profile-user">Location</div>
             <div class="profile-user"><a>Website</a></div>
-            <div class="profile-btn"><button>&#9974;</button></div>
+            <!-- <div class="profile-btn"><a href="#"><button>&#9974;</button></a></div> -->
+            <div class="profile-btn"><a href="#"><button>Edit Profile</button></a></div>
             </div>
             
           </div>
@@ -127,3 +128,6 @@
       </script>
   </body>
 </html>
+<?php
+echo $_SESSION[id];
+?>
