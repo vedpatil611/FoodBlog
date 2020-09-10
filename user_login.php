@@ -17,9 +17,6 @@
 	mysqli_stmt_execute($stmt);
 	$result = mysqli_stmt_get_result($stmt);
 
-	// mysqli_stmt_close($stmt);
-  // $result = mysqli_query($conn, $sql);
-  
   if (mysqli_num_rows($result) == 1) {
   	$row = mysqli_fetch_assoc($result);
   	if(password_verify($password, $row["password"]) == true) {

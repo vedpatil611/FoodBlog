@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2020 at 10:46 AM
+-- Generation Time: Sep 10, 2020 at 07:44 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -45,8 +45,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `profile_pic` mediumblob DEFAULT NULL,
+  `bio` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile_pic`, `bio`) VALUES
+(44, 'Galactagon', 'vedpatil611@gmail.com', '$2y$10$nMhemoihu8cfLHkO8DdrLuH/r5wYpNKyzdScUCKOxl/WqxqFQs0QS', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -78,7 +87,7 @@ ALTER TABLE `recipe`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
