@@ -55,8 +55,9 @@
           </ul>
         </aside>
         <main class="main">
+          <h1>Sign Up</h1>
           <form name="signup_form" action="user_signup.php" method="post">
-      <p><span class = "error">* required field.</span></p>
+
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
             <span class = "error">* <?php echo $emailErr;?></span>
