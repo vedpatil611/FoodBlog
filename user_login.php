@@ -21,7 +21,7 @@
   	if(password_verify($password, $row["password"]) == true) {
   		session_start();
   		$_SESSION["user_id"] = $row["id"];
-    	header("Location: login.php");
+    	header("Location: profile.php");
     } else {
 			// Print credential errors here
 			echo "Wrong password";
