@@ -60,8 +60,13 @@
           $usernameErr = $_GET["usernameErr"];
         ?>
         <main class="main">
+          <h1>Sign Up</h1>
+          
+          
+          <!-- User Signup form starting-->
+          <!--When user submits this form user_signup.php will be executed that validates the data.-->
           <form name="signup_form" action="user_signup.php" method="post">
-      <p><span class = "error">* required field.</span></p>
+
             <div class="input-log">
                 <input  name="email" type="text" placeholder="Enter Email">
             <span class = "error">* <?php echo $emailErr;?></span>

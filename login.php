@@ -33,6 +33,7 @@
           </ul>
         </aside>
         <main class="main">
+          <h1>Login</h1>
           <form name="login_form" action="user_login.php" method="post">
              <div class="input-log">
                 <input  name="username" type="text" placeholder="Enter Username">
@@ -43,6 +44,7 @@
              <div class="submit-log">
                  <button>Log In</button>
              </div>
+             <button id="frg-pass">Forgot password</button>
           </form>
         </main>
 
