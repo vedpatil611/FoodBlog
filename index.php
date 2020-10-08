@@ -54,18 +54,18 @@
 	
 			  while($row = mysqli_fetch_array($res))
 			  {
-				echo '<div class="content-item">';
-				echo  '<div>'.$row['Name'].'</div>';
-				  echo '<div>';
-				 echo '<img src="data:image;base64,'.$row['Photo'].'"> ';
-				 echo '</div>';
-				echo '<div>'.$row['Publisher'].'</div>';
-				  echo '<div>';
-					echo '<form action="view.php">';
-					 echo '<button type="submit">View</button>';
-					echo '</form>';
-				  echo '</div>';
-				echo '</div>';
+				echo '<div class="content-item">
+				<div>'.$row['Name'].'</div>
+				<div>
+				<img src="data:image;base64,'.$row['Photo'].'"> 
+				</div>
+				<div>'.$row['Publisher'].'</div>
+				  <div>
+					<form action="view.php">
+					 <button type="submit">View</button>
+					</form>
+				  </div>
+				</div>';
 			  }
 			}
 		  }
@@ -93,30 +93,9 @@
 		  document.querySelector(".sidebar").classList.remove("open")
 		}
 
-		var slideIndex = 1;
-		showSlides(slideIndex);
+	
 
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-
-		  if (n > slides.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = slides.length}
-		  for (i = 0; i < slides.length; i++) {
-			  slides[i].style.display = "none";  
-		  }
-
-		  slides[slideIndex-1].style.display = "block";  
-
-		}
+		
 	  </script>
   </body>
 </html>
