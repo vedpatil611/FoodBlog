@@ -123,7 +123,7 @@
             	echo '<div class="profile-user">Bio: '.$row["bio"].'</div>';
             	// echo '<div class="profile-user">Location</div>';
             	// echo '<div class="profile-user"><a>Website: '..'</a></div>';
-            	echo '<div class="profile-btn"><a href="#"><button>Edit Profile</button></a></div>';
+            	echo '<div class="profile-btn"><a href="editProfile.php"><button>Edit Profile</button></a></div>';
             	echo '<div class="profile-btn"><a href="#"><button>Add Recipe</button></a></div>';
             	// echo '</div>';
             ?>
