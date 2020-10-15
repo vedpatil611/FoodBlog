@@ -47,13 +47,17 @@
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">
-            <input type="file" name="profile"/>
+            <label class="custom-file-upload">
+              <input type="file" name="profile"/>
+                   Upload Image
+            </label>
+            <!-- <input type="file" name="profile"/> -->
             <input type="text" name="bio" placeholder="Bio"/>
 
 
             <br/><br/>
             <button
-             type="submit" name="submit" value="Upload">ADD</button>
+             type="submit" name="submit" value="Upload">Update</button>
             </div>
           </form>
           <?php
@@ -82,9 +86,9 @@
               
                 $user_id = $_SESSION["user_id"];
                 
-                
+                $qry="update users set profile_pic='$profileimg', bio='$bio' where id=$user_id";
+            
 
-                $qry="update users set profile_pic=$profileimg, bio=$bio where id=$user_id";
                 $result=mysqli_query($con, $qry);
                 if($result)
                 {

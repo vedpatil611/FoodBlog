@@ -47,7 +47,11 @@
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">
-            <input type="file" name="photo"/>
+            <!-- <input  type="file" name="photo"/> -->
+            <label class="custom-file-upload">
+              <input type="file" name="photo" multiple="multiple"/>
+                   Upload Image
+            </label>
             <input type="text" name="name" placeholder="Dish"/>
             <input type="text" name="publisher" placeholder="Username"/>
             <input type="text" name="description" placeholder="Description"/>
@@ -104,7 +108,7 @@
             <?php
 
             	$user_id = $_SESSION["user_id"];
-            	$sql = "SELECT username, bio FROM `users` WHERE id=?";
+            	$sql = "SELECT username, bio, profile_pic FROM `users` WHERE id=?";
 
  	 			$stmt = mysqli_stmt_init($conn);
   
@@ -117,15 +121,12 @@
 				$result = mysqli_stmt_get_result($stmt);
 				$row = mysqli_fetch_assoc($result);
 
-           	 	echo '<img src="res/images/phone-660.jpg">';
-            	// echo '<div class="profile-user">Username/</div>';
+           	 	echo '<img src="data:image;base64,'.$row['profile_pic'].'">' ;
             	echo '<div class="profile-user">Username: '.$row["username"].'</div>';
             	echo '<div class="profile-user">Bio: '.$row["bio"].'</div>';
-            	// echo '<div class="profile-user">Location</div>';
-            	// echo '<div class="profile-user"><a>Website: '..'</a></div>';
-            	echo '<div class="profile-btn"><a href="editProfile.php"><button>Edit Profile</button></a></div>';
-            	echo '<div class="profile-btn"><a href="#"><button>Add Recipe</button></a></div>';
-            	// echo '</div>';
+            	echo '<div class="profile-btn"><a href="editProfile.php"><button>Edit</button></a></div>';
+
+  
             ?>
             
           </div>

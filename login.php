@@ -44,8 +44,9 @@
              <div class="submit-log">
                  <button>Log In</button>
              </div>
-             <button id="frg-pass">Forgot password</button>
+             
           </form>
+          <button id="frg-pass">Forgot password</button>
         </main>
 
 

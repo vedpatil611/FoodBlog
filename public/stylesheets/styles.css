@@ -381,6 +381,19 @@ a:hover {
   align-items: center;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  margin-top: 10%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
 .content-profile-item input {
   outline: none;
   width: 40%;
