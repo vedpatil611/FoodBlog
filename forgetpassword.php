@@ -42,7 +42,7 @@
                 <input  name="email" type="password" placeholder="Enter Email">
              </div>
              <div class="submit-log">
-                 <button>Send Mail</button>
+                 <button><a href="otp.php">Send Mail</a></button>
              </div>
        
 
