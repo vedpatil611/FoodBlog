@@ -41,12 +41,12 @@
             <div class="input-log">
                 <input  name="password" type="password" placeholder="Enter Password">
              </div>
-             <div class="submit-log">
+             <div class="submit-log" >
                  <button>Log In</button>
              </div>
              
           </form>
-          <button id="frg-pass">Forgot password</button>
+          <button id="frg-pass"><a href="forgetpassword.php">Forgot password</a></button>
         </main>
 
 
