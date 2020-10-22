@@ -34,15 +34,15 @@
         </aside>
         <main class="main">
           <h1>Forget Password</h1>
-          <form name="login_form" action="" method="post">
+          <form name="login_form" action="generate_otp.php" method="post">
              <div class="input-log">
                 <input  name="username" type="text" placeholder="Enter Username">
             </div> 
             <div class="input-log">
-                <input  name="email" type="password" placeholder="Enter Email">
+                <input  name="email" type="text" placeholder="Enter Email">
              </div>
              <div class="submit-log">
-                 <button><a href="otp.php">Send Mail</a></button>
+                 <button type="submit"><!-- <a href="otp.php"> -->Send Mail</a></button>
              </div>
        
 

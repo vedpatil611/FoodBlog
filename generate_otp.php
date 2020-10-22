@@ -20,7 +20,7 @@
  	$foodblog_pass  = "";
 
 
- 	if(isset($_POST[""])) {
+ 	if(isset($_POST["email"])) {
 	 	$email = $_POST["email"];
 	 	$username = $_POST["username"];
 
@@ -51,7 +51,7 @@
 		$message = (new Swift_Message('Password reset'))
 			->setFrom([$foodblog_email => 'FoodBlog'])
 			->setTo([$email])
-			->setBody('Enter otp to reset password: '.$otp);
+			->setBody("Enter otp to reset password: ".$otp);
 
 		$result = $mailer->send($message);
 	}
