@@ -39,7 +39,7 @@
                 <input  name="otp" type="number" placeholder="Enter OTP">
             </div>  
              <div class="submit-log">
-                 <button>Submit OTP</button>
+                 <button><a href="passwordreset.php">Submit OTP</a></button>
              </div>
        
 
