@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2020 at 07:44 AM
+-- Generation Time: Oct 22, 2020 at 09:50 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -20,6 +20,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `foodblog`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `otp`
+--
+
+CREATE TABLE `otp` (
+  `id` int(11) NOT NULL,
+  `OTP` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -47,19 +58,27 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `profile_pic` mediumblob DEFAULT NULL,
-  `bio` varchar(255) DEFAULT NULL
+  `bio` varchar(255) DEFAULT NULL,
+  `verfied` tinyint(4) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile_pic`, `bio`) VALUES
-(44, 'Galactagon', 'vedpatil611@gmail.com', '$2y$10$nMhemoihu8cfLHkO8DdrLuH/r5wYpNKyzdScUCKOxl/WqxqFQs0QS', NULL, NULL);
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile_pic`, `bio`, `verfied`) VALUES
+(44, 'Galactagon', 'vedpatil611@gmail.com', '$2y$10$nMhemoihu8cfLHkO8DdrLuH/r5wYpNKyzdScUCKOxl/WqxqFQs0QS', NULL, NULL, 0),
+(48, 'Dion', 'dionpinto@gmail.com', '$2y$10$xICkBl8VAadyR7pZttwS/uK8SutfVnYXnJGozU8HRz0vehphHm1J.', NULL, NULL, 0);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `otp`
+--
+ALTER TABLE `otp`
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `recipe`
@@ -87,7 +106,17 @@ ALTER TABLE `recipe`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `otp`
+--
+ALTER TABLE `otp`
+  ADD CONSTRAINT `otp_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
