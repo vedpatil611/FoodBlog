@@ -1,5 +1,5 @@
 <?php
- 	require "conn.php"
+ 	require "conn.php";
  	require_once 'vendor/autoload.php';
 	
 	/*
