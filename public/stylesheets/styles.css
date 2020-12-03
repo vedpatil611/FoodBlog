@@ -419,6 +419,16 @@ a:hover {
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
   }
+
+  .next-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-top: 350px;
+    color: #f9d56e;
+    background-color: white;
+  }
 }
 
 /* main */
