@@ -6,6 +6,10 @@
 <html lang="en">
 <?php
     include('./partials/header.php');
+    session_start();
+    if (!isset($_SESSION["user_id"])) {
+    	header("Location: login.php");
+    }
   ?>
   <body>
     <div class="grid-container">
@@ -33,20 +37,33 @@
           </ul>
         </aside>
         <main class="main">
-          <h1>Enter New Password</h1>
-          <form name="login_form" action="" method="post">
-             <div class="input-log">
-                <input  name="password" type="password" placeholder="Enter New Password">
-            </div> 
-            <div class="input-log">
-                <input  name="password" type="password" placeholder="Renter Password">
-             </div>
-             <div class="submit-log">
-                 <button><a href="login.php">Save Password</a></button>
-             </div>
-       
+          <div class="search">
+            <!-- <input  type="text" placeholder="Search">
+            <button>&#x2315;</button> -->
+          </div>
+          <div class="content-profile">
 
+          <div class="content-profile-item">
+              <h1>Post a Blog</h1>
+            <form method="post" enctype="multipart/form-data">
+            <br/>
+            <div class="inputs">
+   
+            <input type="text" name="name" placeholder="Dish"/>
+            <input type="text" name="publisher" placeholder="Username"/>
+            <textarea class="pb-desc" rows="4" cols="50"  name="description" placeholder="Description"></textarea>
+
+            <br/><br/>
+            <button
+             type="submit" name="submit" value="Upload">POST</button>
+            </div>
+          </form>
+            
+            </div>
+          
         </main>
+
+
 
 
         <footer class="footer">&copy;ChipmunksCo</footer>
@@ -62,3 +79,6 @@
       </script>
   </body>
 </html>
+<?php
+echo $_SESSION[id];
+?>

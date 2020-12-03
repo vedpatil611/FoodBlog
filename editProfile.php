@@ -16,7 +16,7 @@
         <header class="header">
           <div class="brand">
             <button onClick="openMenu()">&#9776</button>
-            <a href="index.php">The Hungry Chipmunks</a>
+            <a href="index.php">Hungry!</a>
           </div>
           <div class="header-links">
             <?php include "./partials/navbar.php" ?>
@@ -38,12 +38,13 @@
         </aside>
         <main class="main">
           <div class="search">
-            <input  type="text" placeholder="Search">
-            <button>&#x2315;</button>
+            <!-- <input  type="text" placeholder="Search">
+            <button>&#x2315;</button> -->
           </div>
           <div class="content-profile">
 
             <div class="content-profile-item">
+              <h1>Edit Profile</h1>
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">

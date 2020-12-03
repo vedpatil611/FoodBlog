@@ -14,7 +14,7 @@
 		<header class="header">
 		  <div class="brand">
 			<button onClick="openMenu()">&#9776</button>
-			<a href="index.php">The Hungry Chipmunks</a>
+			<a href="index.php">Hungry!</a>
 		  </div>
 		  <div class="header-links">
 			<?php include "./partials/navbar.php" ?>
@@ -30,14 +30,14 @@
 			  <a href="index.php">Recepies</a>
 			</li>
 			<li>
-			  <a href="index.php">Blog</a>
+			  <a href="blog.php">Blog</a>
 			</li>
 		  </ul>
 		</aside>
 		<main class="main">
 		  <div class="search">
-			<input  type="text" placeholder="Search">
-			<button>&#x2315;</button>
+			<!-- <input  type="text" placeholder="Search">
+			<button>&#x2315;</button> -->
 		  </div>
 
 		 

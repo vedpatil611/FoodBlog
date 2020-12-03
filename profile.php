@@ -16,7 +16,7 @@
         <header class="header">
           <div class="brand">
             <button onClick="openMenu()">&#9776</button>
-            <a href="index.php">The Hungry Chipmunks</a>
+            <a href="index.php">Hungry!</a>
           </div>
           <div class="header-links">
             <?php include "./partials/navbar.php" ?>
@@ -38,12 +38,13 @@
         </aside>
         <main class="main">
           <div class="search">
-            <input  type="text" placeholder="Search">
-            <button>&#x2315;</button>
+            <!-- <input  type="text" placeholder="Search">
+            <button>&#x2315;</button> -->
           </div>
           <div class="content-profile">
 
             <div class="content-profile-item">
+              <h1>Post a Recipe</h1>
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">
@@ -124,7 +125,8 @@
            	 	echo '<img src="data:image;base64,'.$row['profile_pic'].'">' ;
             	echo '<div class="profile-user">Username: '.$row["username"].'</div>';
             	echo '<div class="profile-user">Bio: '.$row["bio"].'</div>';
-            	echo '<div class="profile-btn"><a href="editProfile.php"><button>Edit</button></a></div>';
+              echo '<div class="profile-btn"><a href="editProfile.php"><button>Edit</button></a></div>';
+              echo '<div class="profile-btn"><a href="post_blog.php"><button>Blog</button></a></div>';
 
   
             ?>

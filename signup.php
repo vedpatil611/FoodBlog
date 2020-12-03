@@ -14,7 +14,7 @@
    </head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Hungry Chipmunks</title>
+    <title>Hungry!</title>
     <link rel="stylesheet" href="public/stylesheets/styles.css?version=53" />
     <link
       href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700"
@@ -32,7 +32,7 @@
         <header class="header">
           <div class="brand">
             <button onClick="openMenu()">&#9776</button>
-            <a href="index.php">The Hungry Chipmunks</a>
+            <a href="index.php">Hungry!</a>
           </div>
           <div class="header-links">
             <a href="index.php">Home</a>
