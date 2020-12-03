@@ -16,7 +16,7 @@
         <header class="header">
           <div class="brand">
             <button onClick="openMenu()">&#9776</button>
-            <a href="index.php">The Hungry Chipmunks</a>
+            <a href="index.php">Hungry!</a>
           </div>
           <div class="header-links">
             <?php include "./partials/navbar.php" ?>
