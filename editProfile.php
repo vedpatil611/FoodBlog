@@ -44,6 +44,7 @@
           <div class="content-profile">
 
             <div class="content-profile-item">
+              <h1>Edit Profile</h1>
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">

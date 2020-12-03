@@ -460,6 +460,27 @@ input[type="file"] {
   margin: 50px;
 }
 
+@media only screen and (max-width: 800px) {
+  .content-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-profile-item {
+    border-style: solid;
+    border-radius: 25px;
+    text-align: center;
+    height: 600px;
+    width: 450px;
+    color: #092532;
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+  }
+}
+
 /* blog page */
 
 .blog-content {
