@@ -43,65 +43,21 @@
           </div>
           <div class="content-profile">
 
-            <div class="content-profile-item">
+          <div class="content-profile-item">
+              <h1>Post a Blog</h1>
             <form method="post" enctype="multipart/form-data">
             <br/>
             <div class="inputs">
-            <label class="custom-file-upload">
-              <input type="file" name="profile"/>
-                   Upload Image
-            </label>
-            <!-- <input type="file" name="profile"/> -->
-            <input type="text" name="bio" placeholder="Bio"/>
-
+   
+            <input type="text" name="name" placeholder="Dish"/>
+            <input type="text" name="publisher" placeholder="Username"/>
+            <textarea class="pb-desc" rows="4" cols="50"  name="description" placeholder="Description"></textarea>
 
             <br/><br/>
             <button
-             type="submit" name="submit" value="Upload">Update</button>
+             type="submit" name="submit" value="Upload">POST</button>
             </div>
           </form>
-          <?php
-            
-            if(isset($_POST['submit']) && isset($_FILES['profile']))
-            {
-                if(getimagesize($_FILES['profile']['tmp_name'])==FALSE)
-                {
-                    echo "Please select an image";
-                }
-                else
-                {
-                    $profileimg= addslashes($_FILES['profile']['tmp_name']);
-                    $profileimg= file_get_contents($profileimg);
-                    $profileimg= base64_encode($profileimg);
-                    $bio=$_POST['bio'];
-                    saveprofiledetails($profileimg,$bio,$conn);
-                
-                }
-            }
-           
-
-            function saveprofiledetails($profileimg,$bio,$con)
-            {
-               
-              
-                $user_id = $_SESSION["user_id"];
-                
-                $qry="update users set profile_pic='$profileimg', bio='$bio' where id=$user_id";
-            
-
-                $result=mysqli_query($con, $qry);
-                if($result)
-                {
-                    echo "<br/> Edited Profile";
-                }
-                else
-                {
-                    echo "<br/> Not Edited";
-                }
-            }
-
-           
-        ?>
             
             </div>
           

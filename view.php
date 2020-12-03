@@ -34,8 +34,8 @@
         </aside>
         <main class="main">
           <div class="search">
-            <input  type="text" placeholder="Search">
-            <button>&#x2315;</button>
+            <!-- <input  type="text" placeholder="Search">
+            <button>&#x2315;</button> -->
           </div>
           <div class="content-view">
             <div class="content-view-item">
