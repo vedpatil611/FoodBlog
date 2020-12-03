@@ -1,6 +1,6 @@
 <?php
- 	require "conn.php"
- 	require_once 'vendor/autoload.php';
+ 	require "conn.php";
+ 	require_once ("/vendor/autoload.php");
 	
 	/*
 	CREATE EVENT myevent
