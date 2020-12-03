@@ -222,7 +222,7 @@ a:hover {
 }
 
 #frg-pass {
-  margin-left: 900px;
+  margin-left: 60%;
   color: rgb(255, 51, 51);
   outline: none;
   border: none;
@@ -238,6 +238,30 @@ a:hover {
 #frg-pass a {
   text-decoration: none;
   color: rgb(255, 51, 51);
+}
+
+@media only screen and (max-width: 800px) {
+  .submit-log button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #f9d56e;
+    border-radius: 25px;
+    margin-left: 10px;
+    width: 30%;
+    height: 30px;
+    font-size: 1.5rem;
+    transition: background-color 0.5s, transform 0.5s;
+  }
+
+  #frg-pass {
+    margin-left: 70%;
+    color: rgb(255, 51, 51);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: font-size 0.5s;
+  }
 }
 
 /* main */
