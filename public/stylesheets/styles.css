@@ -262,6 +262,15 @@ a:hover {
     cursor: pointer;
     transition: font-size 0.5s;
   }
+
+  .input-log input {
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 30px;
+    background-color: white;
+    border-radius: 25px;
+  }
 }
 
 /* main */
