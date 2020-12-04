@@ -51,7 +51,7 @@
    
             <input type="text" name="title" placeholder="Title"/>
             <input type="text" name="author" placeholder="Author"/>
-            <textarea class="pb-desc" rows="4" cols="50"  name="description" placeholder="Description"></textarea>
+            <textarea class="pb-desc" rows="15" cols="50"  name="description" placeholder="Description"></textarea>
 
             <br/><br/>
             <button
