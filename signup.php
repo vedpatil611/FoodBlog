@@ -50,7 +50,7 @@
               <a href="index.php">Recepies</a>
             </li>
             <li>
-              <a href="index.php">Blog</a>
+            <a href="blog.php">Blog</a>
             </li>
           </ul>
         </aside>

@@ -10,7 +10,7 @@
     if (!isset($_SESSION["user_id"])) {
     	header("Location: login.php");
     }
-  ?>
+?>
   <body>
     <div class="grid-container">
       <header class="header">

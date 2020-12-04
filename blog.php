@@ -77,17 +77,15 @@
           <div class="blog-item">
             <h2 class="blog-item-title">Title</h2>
             <div class="blog-item-author">DIon Pinto</div>
-            <div class="blog-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni harum nemo, numquam illo corporis earum atque neque minus nam minima nihil iure quo tempora necessitatibus. Explicabo voluptate culpa asperiores.</div>
+            <div class="blog-item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repellat neque est? Deserunt ducimus est id et incidunt.
+			 Asperiores atque ad nulla autem fuga explicabo enim accusantium voluptatum eum. Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni harum nemo, numquam illo corporis earum atque neque minus nam minima nihil iure quo tempora necessitatibus. Explicabo voluptate culpa asperiores.</div>
           </div>
-          
-          <div class="blog-item">
-            hello
-          </div>
-          <div class="blog-item">
-            hello
-          </div>
-          <div class="blog-item">
-            hello
+        
+		  <div class="blog-item">
+            <h2 class="blog-item-title">Title</h2>
+            <div class="blog-item-author">DIon Pinto</div>
+            <div class="blog-item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repellat neque est? Deserunt ducimus est id et incidunt.
+			 Asperiores atque ad nulla autem fuga explicabo enim accusantium voluptatum eum. Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni harum nemo, numquam illo corporis earum atque neque minus nam minima nihil iure quo tempora necessitatibus. Explicabo voluptate culpa asperiores.</div>
           </div>
 
 
