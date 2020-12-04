@@ -1,5 +1,5 @@
 <?php 
-	require "conn.php"
+	require "conn.php";
 
 	$steps = array();
 	$images = array();
@@ -16,7 +16,6 @@
 
 	$step_count = 1;
 
-
     if(isset($_POST['recipe_name'])) {
 		$_SESSION['images'] = $images;
 		$_SESSION['step_detail'] = $step_detail;
@@ -25,15 +24,21 @@
 		$_SESSION['recipe_name'] = $_POST['recipe_name'];
 		$_SESSION['publisher'] = $_POST['publisher'];
 		$_SESSION['description'] = $_POST['description'];
-		$_SESSION['recipe_icon'] = $_FILES['photo']['name'];
+
+		$image= addslashes($_FILES['photo']['tmp_name']);
+		$image= file_get_contents($image);
+		$image= base64_encode($image);
+		$_SESSION['recipe_icon'] = $image;
     } else if(isset($_POST['next'])) {
     	//create next step
     	$_SESSION['step_detail'][$_SESSION['step_count']] = $_POST['step_detail'];
-    	$_SESSION['images'][$_SESSION['step_count']] = $_FILES['photo']['name'];
+    	$image= addslashes($_FILES['photo']['tmp_name']);
+		$image= file_get_contents($image);
+		$image= base64_encode($image);
+    	$_SESSION['images'][$_SESSION['step_count']] = $image;
     	$_SESSION['step_count'] = $_SESSION['step_count'] + 1;
     } else {
     	//submit recipe
-
     	$query = "INSERT INTO recipe(Name, Publisher, Description, Photo) VALUES('".$_SESSION['recipe_name']."', '".$_SESSION['publisher']."', '".$_SESSION['description']."', '".$_SESSION['recipe_icon']."')";
 
     	mysqli_query($conn, $query);
@@ -51,7 +56,7 @@
     	for ($i=1; $i <= sizeof($_SESSION['step_detail']); $i++) { 
     		$query = "INSERT INTO recipe_detail VALUES(".$id.", ".$i.", '".$_SESSION['step_detail'][$i]."', '".$_SESSION['images'][$i]."')";
     	}
-    	
+
     	header("Location: profile.php");
     }
     
@@ -67,8 +72,9 @@
             <textarea type="text" name="step_detail" placeholder="Step"
             	rows="20" cols="100"></textarea>
 
-			<button type="submit" name="next" value="Upload">NEXT</button>
+			<button type="submit" name="next" value="Add">NEXT</button>
             <button type="submit" name="submit" value="Upload">SUBMIT</button>
 		</div>
 	</form>
 </body>
+</html>
