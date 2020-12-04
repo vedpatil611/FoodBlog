@@ -348,8 +348,7 @@ a:hover {
   background-color: #ffbe31;
   align-self: center;
   color: white;
-  width: 20%;
-
+  width: 30%;
   border-radius: 25px;
 }
 
@@ -392,6 +391,7 @@ a:hover {
 }
 .content-view-item2 img {
   margin-top: 4px;
+  border-radius: 10px;
 }
 
 .next-btn {
@@ -473,9 +473,9 @@ a:hover {
     margin-bottom: 30px;
   }
 
-  .content-view-item2 img {
+  /* .content-view-item2 img {
     width: 100%;
-  }
+  } */
 }
 
 /* main */
