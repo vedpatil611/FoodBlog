@@ -21,6 +21,7 @@
   	if(password_verify($password, $row["password"]) == true) {
   		session_start();
   		$_SESSION["user_id"] = $row["id"];
+      $_SESSION["username"] = $row["username"];
     	header("Location: profile.php");
     } else {
 			// Print credential errors here

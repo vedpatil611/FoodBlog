@@ -61,9 +61,7 @@
 				</div>
 				<div>'.$row['Publisher'].'</div>
 				  <div>
-					<form action="view.php">
-					 <button type="submit" value="'.$row['id'].'">View</button>
-					</form>
+					<a href="view.php?id='.$row['id'].'"><button type="submit">View</button></a>
 				  </div>
 				</div>';
 			  }
