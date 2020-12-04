@@ -57,9 +57,6 @@
           </div>
         </main>
 
-
-
-
         <footer class="footer">&copy;ChipmunksCo</footer>
       </div>
       <script>

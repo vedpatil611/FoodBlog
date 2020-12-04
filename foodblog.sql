@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2020 at 09:50 AM
+-- Generation Time: Dec 04, 2020 at 05:54 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -49,6 +49,19 @@ CREATE TABLE `recipe` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `recipe_details`
+--
+
+CREATE TABLE `recipe_details` (
+  `id` int(11) NOT NULL,
+  `step_count` int(11) NOT NULL,
+  `step_detail` varchar(2047) DEFAULT NULL,
+  `image` longblob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -67,8 +80,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `profile_pic`, `bio`, `verfied`) VALUES
-(44, 'Galactagon', 'vedpatil611@gmail.com', '$2y$10$nMhemoihu8cfLHkO8DdrLuH/r5wYpNKyzdScUCKOxl/WqxqFQs0QS', NULL, NULL, 0),
-(48, 'Dion', 'dionpinto@gmail.com', '$2y$10$xICkBl8VAadyR7pZttwS/uK8SutfVnYXnJGozU8HRz0vehphHm1J.', NULL, NULL, 0);
+(48, 'Dion', 'dionpinto@gmail.com', '$2y$10$xICkBl8VAadyR7pZttwS/uK8SutfVnYXnJGozU8HRz0vehphHm1J.', NULL, NULL, 0),
+(50, 'Galactagon', 'vedpatil611@gmail.com', '$2y$10$8H9GIkfc31puMxet8LsamuUpDWOrlKbbXxcBcw/VrdQ/b0.kEHb5K', NULL, NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -87,6 +100,12 @@ ALTER TABLE `recipe`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `recipe_details`
+--
+ALTER TABLE `recipe_details`
+  ADD KEY `id` (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -100,13 +119,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `recipe`
 --
 ALTER TABLE `recipe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Constraints for dumped tables

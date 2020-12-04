@@ -32,10 +32,12 @@
     } else if(isset($_POST['next'])) {
     	//create next step
     	$_SESSION['step_detail'][$_SESSION['step_count']] = $_POST['step_detail'];
+    	
     	$image = addslashes($_FILES['photo']['tmp_name']);
 		$image = file_get_contents($image);
 		$image = base64_encode($image);
     	$_SESSION['images'][$_SESSION['step_count']] = $image;
+    	
     	$_SESSION['step_count'] = $_SESSION['step_count'] + 1;
     	echo sizeof($_SESSION['step_detail']);
     	echo sizeof($_SESSION['images']);
@@ -45,16 +47,8 @@
     	$query = "INSERT INTO recipe(Name, Publisher, Description, Photo) VALUES('".$_SESSION['recipe_name']."', '".$_SESSION['publisher']."', '".$_SESSION['description']."', '".$_SESSION['recipe_icon']."')";
 
     	mysqli_query($conn, $query);
-/*
-    	$query = "SELECT id FROM recipe WHERE Name='".$_SESSION['recipe_name']."', Publisher='".$_SESSION['publisher']."', Description='".$_SESSION['description']."'";
-    	$result = mysqli_query($conn, $query);*/
 
     	$id = mysqli_insert_id($conn);
-
-    	// if(mysqli_num_rows($result) > 0) {
-    		// $row = mysqli_fetch_assoc($result);
-    		// $id = $row['id'];
-    	// }
 
     	for ($i=1; $i < $_SESSION['step_count']; $i++) {
     		echo $id;
@@ -68,7 +62,7 @@
     		}
     	}
 
-    	// header("Location: profile.php");
+    	header("Location: profile.php");
     }
     
 ?>
