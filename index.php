@@ -61,7 +61,7 @@
 				</div>
 				<div>'.$row['Publisher'].'</div>
 				  <div>
-					<a href="view.php?id='.$row['id'].'"><button type="submit">View</button></a>
+					<a href="view.php?id='.$row['id'].'&step=1"><button type="submit">View</button></a>
 				  </div>
 				</div>';
 			  }
