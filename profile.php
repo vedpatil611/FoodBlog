@@ -13,39 +13,39 @@
   ?>
   <body>
     <div class="grid-container">
-        <header class="header">
-          <div class="brand">
-            <button onClick="openMenu()">&#9776</button>
-            <a href="index.php">Hungry!</a>
-          </div>
-          <div class="header-links">
-            <?php include "./partials/navbar.php" ?>
-          </div>
-        </header>
-        <aside class="sidebar">
-          <h3>Menu</h3>
-          <button class="sidebar-close-button"  onClick="closeMenu()">
-            &#10005
-          </button>
-          <ul>
-            <li>
-              <a href="index.php">Recepies</a>
-            </li>
-            <li>
-              <a href="index.php">Blog</a>
-            </li>
-          </ul>
-        </aside>
-        <main class="main">
-          <div class="search">
+      <header class="header">
+        <div class="brand">
+          <button onClick="openMenu()">&#9776</button>
+          <a href="index.php">Hungry!</a>
+        </div>
+        <div class="header-links">
+          <?php include "./partials/navbar.php" ?>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <h3>Menu</h3>
+        <button class="sidebar-close-button"  onClick="closeMenu()">
+          &#10005
+        </button>
+        <ul>
+          <li>
+            <a href="index.php">Recepies</a>
+          </li>
+          <li>
+            <a href="index.php">Blog</a>
+          </li>
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="search">
             <!-- <input  type="text" placeholder="Search">
             <button>&#x2315;</button> -->
-          </div>
-          <div class="content-profile">
+        </div>
+        <div class="content-profile">
 
-            <div class="content-profile-item">
-              <h1>Post a Recipe</h1>
-            <form method="post" enctype="multipart/form-data">
+        <div class="content-profile-item">
+          <h1>Post a Recipe</h1>
+          <form method="post" name="new_recipe" action="upload_recipe_details.php" enctype="multipart/form-data">
             <br/>
             <div class="inputs">
             <!-- <input  type="file" name="photo"/> -->
@@ -53,13 +53,13 @@
               <input type="file" name="photo" multiple="multiple"/>
                    Upload Image
             </label>
-            <input type="text" name="name" placeholder="Dish"/>
+            <input type="text" name="recipe_name" placeholder="Dish"/>
             <input type="text" name="publisher" placeholder="Username"/>
             <input type="text" name="description" placeholder="Description"/>
 
             <br/><br/>
             <button
-             type="submit" name="submit" value="Upload">POST</button>
+             type="submit" name="submit" value="Upload">NEXT</button>
             </div>
           </form>
           <?php
