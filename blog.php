@@ -46,47 +46,30 @@
 
 		  <?php
 		  
-		//   $qry = "select * from recipe";
-		//   if($res=mysqli_query($conn,$qry))
-		//   {
-		// 	if(mysqli_num_rows($res)>0)
-		// 	{
+		  $qry = "select * from blog";
+		  if($res=mysqli_query($conn,$qry))
+		  {
+			if(mysqli_num_rows($res)>0)
+			{
 	
-		// 	  while($row = mysqli_fetch_array($res))
-		// 	  {
-		// 		echo '<div class="content-item">
-		// 		<div>'.$row['Name'].'</div>
-		// 		<div>
-		// 		<img src="data:image;base64,'.$row['Photo'].'"> 
-		// 		</div>
-		// 		<div>'.$row['Publisher'].'</div>
-		// 		  <div>
-		// 			<form action="view.php">
-		// 			 <button type="submit">View</button>
-		// 			</form>
-		// 		  </div>
-		// 		</div>';
-		// 	  }
-		// 	}
-        //   }
+			  while($row = mysqli_fetch_array($res))
+			  {
+				
+
+				echo '<div class="blog-item">
+				<h2 class="blog-item-title">'.$row['title'].'</h2>
+				<div class="blog-item-author">'.$row['author'].'</div>
+				<div class="blog-item-desc">'.$row['description'].'</div>
+			  </div>';
+			  }
+			}
+          }
         
         
 		  
 		  ?>
 
-          <div class="blog-item">
-            <h2 class="blog-item-title">Title</h2>
-            <div class="blog-item-author">DIon Pinto</div>
-            <div class="blog-item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repellat neque est? Deserunt ducimus est id et incidunt.
-			 Asperiores atque ad nulla autem fuga explicabo enim accusantium voluptatum eum. Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni harum nemo, numquam illo corporis earum atque neque minus nam minima nihil iure quo tempora necessitatibus. Explicabo voluptate culpa asperiores.</div>
-          </div>
         
-		  <div class="blog-item">
-            <h2 class="blog-item-title">Title</h2>
-            <div class="blog-item-author">DIon Pinto</div>
-            <div class="blog-item-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repellat neque est? Deserunt ducimus est id et incidunt.
-			 Asperiores atque ad nulla autem fuga explicabo enim accusantium voluptatum eum. Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni harum nemo, numquam illo corporis earum atque neque minus nam minima nihil iure quo tempora necessitatibus. Explicabo voluptate culpa asperiores.</div>
-          </div>
 
 
 		   

@@ -49,8 +49,8 @@
             <br/>
             <div class="inputs">
    
-            <input type="text" name="name" placeholder="Dish"/>
-            <input type="text" name="publisher" placeholder="Username"/>
+            <input type="text" name="title" placeholder="Title"/>
+            <input type="text" name="author" placeholder="Author"/>
             <textarea class="pb-desc" rows="4" cols="50"  name="description" placeholder="Description"></textarea>
 
             <br/><br/>
@@ -58,6 +58,39 @@
              type="submit" name="submit" value="Upload">POST</button>
             </div>
           </form>
+
+          <?php
+            
+            if(isset($_POST['submit']))
+            {
+                    $title=$_POST['title'];
+                    $author=$_POST['author'];
+                    $description=$_POST['description'];
+                    runquery($title,$author,$description,$conn);
+                
+               
+            }
+           
+
+            function runquery($title,$author,$description,$conn)
+            {
+               
+              
+
+                $qry="insert into blog (title,author,description) values ('$title','$author','$description')";
+                $result=mysqli_query($conn, $qry);
+                if($result)
+                {
+                    echo "<br/> Uploaded";
+                }
+                else
+                {
+                    echo "<br/> Not Uploaded";
+                }
+            }
+
+           
+        ?>
             
             </div>
           
