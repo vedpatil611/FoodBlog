@@ -58,7 +58,7 @@
 
 				echo '<div class="blog-item">
 				<h2 class="blog-item-title">'.$row['title'].'</h2>
-				<div class="blog-item-author">'.$row['author'].'</div>
+				<div class="blog-item-author">By '.$row['author'].'</div>
 				<div class="blog-item-desc">'.$row['description'].'</div>
 			  </div>';
 			  }

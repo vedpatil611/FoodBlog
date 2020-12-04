@@ -86,11 +86,11 @@
               <?php echo $recipe_detail; ?><br>
               <?php echo $recipe_publisher; ?><br>
             </div> 
-            <div class="social-btn">
+            <!-- <div class="social-btn">
               <button>Blog</button>
               <button>Social</button>
               <button>Social</button>
-            </div>
+            </div> -->
             </div>
             <div class="content-view-item">
             <h2>Step <?php echo $step_count; ?></h2>
