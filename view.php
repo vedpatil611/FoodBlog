@@ -6,7 +6,8 @@
 <html lang="en">
 <?php
     include('./partials/header.php');
-  ?>
+    $id = $_POST['submit'];
+?>
   <body>
     <div class="grid-container">
         <header class="header">

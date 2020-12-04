@@ -62,7 +62,7 @@
 				<div>'.$row['Publisher'].'</div>
 				  <div>
 					<form action="view.php">
-					 <button type="submit">View</button>
+					 <button type="submit" value="'.$row['id'].'">View</button>
 					</form>
 				  </div>
 				</div>';

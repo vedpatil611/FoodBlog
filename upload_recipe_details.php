@@ -28,6 +28,8 @@
 		$image = addslashes($_FILES['photo']['tmp_name']);
 		$image = file_get_contents($image);
 		$image = base64_encode($image);
+		// echo $image;
+		// echo '<br>';
 		$_SESSION['recipe_icon'] = $image;
     } else if(isset($_POST['next'])) {
     	//create next step
@@ -38,10 +40,13 @@
 		$image = base64_encode($image);
     	$_SESSION['images'][$_SESSION['step_count']] = $image;
     	
+    	// move_uploaded_file($_FILES['photo']['tmp_name'], "images/".$_SESSION['step_count']);
+    	// echo $image;
+    	// echo '<br>';
     	$_SESSION['step_count'] = $_SESSION['step_count'] + 1;
-    	echo sizeof($_SESSION['step_detail']);
-    	echo sizeof($_SESSION['images']);
-    	echo $_SESSION['step_count'];
+    	// echo sizeof($_SESSION['step_detail']);
+    	// echo sizeof($_SESSION['images']);
+    	// echo $_SESSION['step_count'];
     } else {
     	//submit recipe
     	$query = "INSERT INTO recipe(Name, Publisher, Description, Photo) VALUES('".$_SESSION['recipe_name']."', '".$_SESSION['publisher']."', '".$_SESSION['description']."', '".$_SESSION['recipe_icon']."')";
@@ -51,10 +56,10 @@
     	$id = mysqli_insert_id($conn);
 
     	for ($i=1; $i < $_SESSION['step_count']; $i++) {
-    		echo $id;
-    		echo '<br>';
-    		echo $i; 
-    		echo '<br>';
+    		// echo $id;
+    		// echo '<br>';
+    		// echo $i; 
+    		// echo '<br>';
     		$sql = "INSERT INTO recipe_details(id, step_count, step_detail, image) VALUES(".$id.", ".$i.", '".$_SESSION['step_detail'][$i]."', '".$_SESSION['images'][$i]."')";
     		if(!mysqli_query($conn, $sql)) {
 				echo mysqli_error($conn);    			
@@ -68,10 +73,10 @@
 ?>
 
 <body>
-	<form action="upload_recipe_details.php" method="POST">
+	<form action="upload_recipe_details.php" method="POST" enctype="multipart/form-data">
 		<div class="inputs">
 			<label class="custom-file-upload">
-				<input type="file" name="photo" multiple="multiple"/>
+				<input type="file" name="photo" />
 				Upload Image
             </label>
             <textarea type="text" name="step_detail" placeholder="Step"
