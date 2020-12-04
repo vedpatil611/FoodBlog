@@ -45,7 +45,7 @@
       $step_detail = $row['step_detail'];
       $step_image = $row['image'];
     }
-    echo $step_image;
+    // echo $step_image;
 ?>
   <body>
     <div class="grid-container">
@@ -94,7 +94,11 @@
             </div>
             <div class="content-view-item">
             <h2>Step <?php echo $step_count; ?></h2>
-            <img src="data:image;base64,<?php echo $step_image; ?>" width="200" height="200">
+            <?php
+              if($step_image != "") {
+                echo '<img src="data:image;base64,'.$step_image.'" width="200" height="200">';
+              }
+            ?>
             <p><?php echo $step_detail; ?></p>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count + 1); ?>"><button class="next-btn"><</button></a>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count - 1); ?>"><button class="next-btn">></button></a>
