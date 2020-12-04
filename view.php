@@ -58,13 +58,13 @@
           <div class="content-view">
             <div class="content-view-item">
             <!-- <img src="res/images/phone-660.jpg"> -->
-            <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="200" height="200">
+            <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="650" height="450">
             <div><?php echo $recipe_publisher ?></div> 
-            <div class="social-btn">
+            <!-- <div class="social-btn">
               <button>Blog</button>
               <button>Social</button>
               <button>Social</button>
-            </div>
+            </div> -->
             </div>
             <div class="content-view-item">
             <h2>Step 1</h2>
