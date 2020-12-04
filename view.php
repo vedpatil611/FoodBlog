@@ -80,7 +80,7 @@
           <div class="content-view">
             <div class="content-view-item">
             <!-- <img src="res/images/phone-660.jpg"> -->
-            <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="200" height="200">
+            <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="600" height="450">
             <div>
               <?php echo $recipe_name; ?><br>
               <?php echo $recipe_detail; ?><br>
@@ -94,7 +94,7 @@
             </div>
             <div class="content-view-item">
             <h2>Step <?php echo $step_count; ?></h2>
-            <img src="data:image;base64,<?php echo $step_image; ?>" width="200" height="200">
+            <img src="data:image;base64,<?php echo $step_image; ?>" width="600" height="450">
             <p><?php echo $step_detail; ?></p>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count + 1); ?>"><button class="next-btn"><</button></a>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count - 1); ?>"><button class="next-btn">></button></a>
