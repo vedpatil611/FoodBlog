@@ -54,7 +54,6 @@
                    Upload Image
             </label>
             <input type="text" name="recipe_name" placeholder="Dish"/>
-            <input type="text" name="publisher" placeholder="Username"/>
             <input type="text" name="description" placeholder="Description"/>
 
             <br/><br/>

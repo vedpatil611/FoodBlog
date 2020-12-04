@@ -83,9 +83,9 @@
             <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="600" height="450">
             <div class="cv-tag">
              <div>Recipe: <?php echo $recipe_name; ?></div>
-             <div>Category: <?php echo $recipe_detail; ?></div>
              <div>Author: <?php echo $recipe_publisher; ?></div>
             </div> 
+            <div>Description: <?php echo $recipe_detail; ?></div>
             <!-- <div class="social-btn">
               <button>Blog</button>
               <button>Social</button>

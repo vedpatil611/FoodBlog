@@ -22,7 +22,7 @@
 		$_SESSION['step_count'] = 1;
 
 		$_SESSION['recipe_name'] = $_POST['recipe_name'];
-		$_SESSION['publisher'] = $_POST['publisher'];
+		$_SESSION['publisher'] = $_SESSION['username'];
 		$_SESSION['description'] = $_POST['description'];
 
 		$image = addslashes($_FILES['photo']['tmp_name']);
@@ -44,6 +44,7 @@
     	// echo $image;
     	// echo '<br>';
     	$_SESSION['step_count'] = $_SESSION['step_count'] + 1;
+    	
     	// echo sizeof($_SESSION['step_detail']);
     	// echo sizeof($_SESSION['images']);
     	// echo $_SESSION['step_count'];

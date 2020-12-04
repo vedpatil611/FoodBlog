@@ -1,5 +1,7 @@
 <?php
-  require "conn.php"
+  require "conn.php";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,19 +35,15 @@
           </ul>
         </aside>
         <main class="main">
-          <h1>Forget Password</h1>
-          <form name="login_form" action="resetpassword.php" method="post">
-             <div class="input-log">
-                <input  name="username" type="text" placeholder="Enter Username">
-            </div> 
+          <h1>OTP</h1>
+          <form name="login_form" action="" method="post">
             <div class="input-log">
-                <input  name="email" type="text" placeholder="Enter Email">
-             </div>
+                <input  name="otp" type="number" placeholder="Enter OTP">
+            </div>  
              <div class="submit-log">
-                 <button type="submit"><!-- <a href="otp.php"> -->Send Mail</a></button>
+                 <button><a href="passwordreset.php">Submit OTP</a></button>
              </div>
-       
-
+          </form>
         </main>
 
 
