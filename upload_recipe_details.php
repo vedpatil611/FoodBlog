@@ -73,18 +73,22 @@
 ?>
 
 <body>
+<div class="ur-main">
+<div class="ur-main-item">
 	<form action="upload_recipe_details.php" method="POST" enctype="multipart/form-data">
 		<div class="inputs">
 			<label class="custom-file-upload">
 				<input type="file" name="photo" />
 				Upload Image
             </label>
-            <textarea type="text" name="step_detail" placeholder="Step"
-            	rows="20" cols="100"></textarea>
+            <textarea class="ur-main-text" type="text" name="step_detail" placeholder="Step"
+            	rows="20" cols="80"></textarea>
 
-			<button type="submit" name="next" value="Add">NEXT</button>
-            <button type="submit" name="submit" value="Upload">SUBMIT</button>
+			<button class="ur-main-btn" type="submit" name="next" value="Add">NEXT</button>
+            <button class="ur-main-btn" type="submit" name="submit" value="Upload">SUBMIT</button>
 		</div>
 	</form>
+	</div>
+	</div>
 </body>
 </html>

@@ -580,3 +580,50 @@ input[type="file"] {
   border-radius: 5px;
   margin-top: 10px;
 }
+
+/* upload recepie */
+.ur-main {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.ur-main-item {
+  margin-top: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-radius: 25px;
+  text-align: center;
+  height: 600px;
+  width: 650px;
+  color: #092532;
+  background-color: white;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+}
+
+.ur-main-btn {
+  margin-top: 50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #f9d56e;
+  border-radius: 25px;
+  margin-left: 10px;
+  width: 30%;
+  height: 30px;
+  font-size: 1.5rem;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.ur-main-btn:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #ffbe31;
+}
+
+.ur-main-text {
+  margin-top: 20px;
+}
