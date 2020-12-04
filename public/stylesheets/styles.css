@@ -336,6 +336,21 @@ a:hover {
 
 /* main */
 /* view.php */
+.cv-tag {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cv-tag div {
+  background-color: #ffbe31;
+  align-self: center;
+  color: white;
+  width: 20%;
+  height: 20px;
+  border-radius: 25px;
+}
 
 .content-view {
   display: grid;
@@ -349,7 +364,19 @@ a:hover {
   border-radius: 25px;
   text-align: center;
   height: 600px;
-  width: 650px;
+  width: 600px;
+  color: #092532;
+  background-color: white;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+}
+.content-view-item2 {
+  border-style: solid;
+  border-radius: 25px;
+  text-align: center;
+  height: 600px;
+  width: 600px;
   color: #092532;
   background-color: white;
   border: none;
@@ -361,6 +388,9 @@ a:hover {
   margin-top: 4px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
+}
+.content-view-item2 img {
+  margin-top: 4px;
 }
 
 .next-btn {
@@ -424,9 +454,28 @@ a:hover {
     border: none;
     cursor: pointer;
     font-size: 3rem;
-    margin-top: 350px;
+    margin-top: 5%;
     color: #f9d56e;
     background-color: white;
+  }
+
+  .content-view-item2 {
+    border-style: solid;
+    border-radius: 25px;
+    text-align: center;
+    height: 600px;
+    width: 450px;
+    color: #092532;
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 30px;
+  }
+
+  .content-view-item2 img {
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
   }
 }
 

@@ -81,10 +81,10 @@
             <div class="content-view-item">
             <!-- <img src="res/images/phone-660.jpg"> -->
             <img src="data:image;base64,<?php echo $recipe_icon; ?>" width="600" height="450">
-            <div>
-              <?php echo $recipe_name; ?><br>
-              <?php echo $recipe_detail; ?><br>
-              <?php echo $recipe_publisher; ?><br>
+            <div class="cv-tag">
+             <div>Recipe: <?php echo $recipe_name; ?></div>
+             <div>Category: <?php echo $recipe_detail; ?></div>
+             <div>Author: <?php echo $recipe_publisher; ?></div>
             </div> 
             <!-- <div class="social-btn">
               <button>Blog</button>
@@ -92,9 +92,9 @@
               <button>Social</button>
             </div> -->
             </div>
-            <div class="content-view-item">
+            <div class="content-view-item2">
             <h2>Step <?php echo $step_count; ?></h2>
-            <img src="data:image;base64,<?php echo $step_image; ?>" width="600" height="400">
+            <img src="data:image;base64,<?php echo $step_image; ?>" width="600" height="300">
             <p><?php echo $step_detail; ?></p>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count + 1); ?>"><button class="next-btn"><</button></a>
             <a href="view.php?id=<?php echo $recipe_id; ?>&step=<?php echo ($step_count - 1); ?>"><button class="next-btn">></button></a>
