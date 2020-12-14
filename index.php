@@ -54,24 +54,65 @@
 	
 			  while($row = mysqli_fetch_array($res))
 			  {
-				echo '<div class="content-item">
-				<div>'.$row['Name'].'</div>
+				$name = $row['Name'];
+				$photo =$row['Photo'];
+				$publisher =$row['Publisher'];
+				$id = $row['id'];
+				$like = $row['like_count'];
+				$dislike =$row['dislike_count'];
+
+				echo "<div class='content-item'>
+				<div>$name</div>
 				<div>
-				<img src="data:image;base64,'.$row['Photo'].'"> 
+				<img src='data:image;base64,$photo'> 
 				</div>
-				<div>'.$row['Publisher'].'</div>
+				<div><a href='userProfile.php?id=$publisher'>$publisher</a></div>
 				  <div>
-					<a href="view.php?id='.$row['id'].'&step=1"><button type="submit">View</button></a>
+					<a href='view.php?id=$id&step=1'><button type='submit'>View</button></a>
+					<i class='fa fa-thumbs-up' id='like_loop_$id' onclick='like_update($id)'>$like</i>
+					<i class='fa fa-thumbs-down' id='dislike_loop' onclick='dislike_update($id)'></i>
 				  </div>
-				</div>';
+				</div>
+				";
 			  }
 			}
 		  }
 		  
-		  ?>
-
-		   
+		  ?>   
+		<script>
+			  function like_update(id){
+				  var cur_count = $('#like_loop_'+id).html();
+				  cur_count++;
+				  $('#like_loop_'+id).html(cur_count);
+				  $.ajax({
+					  url:'update_count.php',
+					  type:'post',
+					  data: 'type=like&id='+id,
+					  success: function(result){
+						
+					  }
+				  })
+			  }
+			  function dislike_update(id){
+				  var cur_count = $('#like_loop_'+id).html();
+				  cur_count--;
+				  $('#like_loop_'+id).html(cur_count);
+				  $.ajax({
+					  url:'update_count.php',
+					  type:'post',
+					  data: 'type=dislike&id='+id,
+					  success: function(result){
+						
+					  }
+				  })
+			  }
+		  </script>
 		  </div>
+
+
+
+
+
 		</main>
 
 		<?php

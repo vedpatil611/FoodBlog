@@ -66,7 +66,7 @@
                     $title=$_POST['title'];
                     $author=$_POST['author'];
                     $description=$_POST['description'];
-                    runquery($title,$author,$description,$conn);
+                    runquery($title,$author,nl2br($description),$conn);
             }
            
 

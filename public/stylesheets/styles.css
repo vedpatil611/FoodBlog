@@ -310,12 +310,20 @@ a:hover {
   width: 25%;
   height: 25px;
   border-radius: 25px;
-  margin-right: 210px;
+  margin-right: 150px;
   margin-top: 15px;
   background-color: #f9d56e;
   transition: background-color 0.5s, transform 0.5s;
 }
 
+.fa {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa:hover {
+  color: #ffbe31;
+}
 .content-item button:hover {
   transform: scale(1.1, 1.1);
   background-color: #ffbe31;

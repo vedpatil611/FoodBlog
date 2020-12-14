@@ -88,7 +88,7 @@
                
               
 
-                $qry="insert into recipe (Name,Publisher,Description,Photo) values ('$name','$publisher','$description','$image')";
+                $qry="insert into recipe (Name,Publisher,Description,Photo,like,dislike) values ('$name','$publisher','$description','$image',0,0)";
                 $result=mysqli_query($con, $qry);
                 if($result)
                 {
