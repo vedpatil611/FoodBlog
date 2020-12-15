@@ -85,7 +85,7 @@
              <div>Recipe: <?php echo $recipe_name; ?></div>
              <div>Author: <?php echo $recipe_publisher; ?></div>
             </div> 
-            <div>Description: <?php echo $recipe_detail; ?></div>
+           
             <!-- <div class="social-btn">
               <button>Blog</button>
               <button>Social</button>
