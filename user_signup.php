@@ -87,15 +87,27 @@
 			
 
 			if($usernameErr=="" && $emailErr=="" && $passwordErr=="") {
-				$sql = "INSERT INTO users(username, email, password) VALUES(?, ?, ?)";
+				$v_key = md5(time().$username);
+
+				$sql = "INSERT INTO users(username, email, password, vCode) VALUES(?, ?, ?, ?)";
 				$stmt = mysqli_stmt_init($conn);
   
 	  			if(!mysqli_stmt_prepare($stmt, $sql)) {
   					echo mysqli_stmt_error($stmt);
   				}
 
-				mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
+				mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $password, $v_key);
 				if(mysqli_stmt_execute($stmt)) {
+
+					$email_to = $email;
+					$email_subject = "Email Verification";
+					$email_message = "<a href='http://localhost/FoodBlog/verify.php?v_key=$v_key'>Verify Email</a>";
+					$header  = "From: hungry.foodblog@gmail.com \r\n";
+					$header .= "MIME-Version: 1.0 \r\n";
+					$header .= "Content-type:text/html;charset=UTF-8 \r\n";
+
+					mail($email_to, $email_subject, $email_message, $header);
+
 					header("Location: login.php");
 				}
 			} else {
